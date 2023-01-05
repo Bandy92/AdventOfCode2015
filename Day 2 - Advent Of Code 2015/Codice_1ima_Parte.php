@@ -14,7 +14,7 @@ require 'input_1imo_Step.php';
 // Sistemiamo il codice in input (per sicurezza inserisco anche delle voci extra come "\t" ad esempio, non si sa mai)
 $array = explode("x", str_replace(array("\n", "\t", "\r", "\a"), "x", $input1));
 
-// Impostiamo la partenza e l'arrivo del ciclo. Dobbiamo utilizzare per sicurezza un "foreach" perchè un "count" potrebbe non essere interpretato bene, stessa cosa per le varianti di "var_dump". La fine va calcolata dividendola per 4 perchè ricordiamo che sono 3 numeri accompagnati da una "x" e uno spazio vuoto che ne rappresenta il fatto che ad ogni tripletta di numeri ci sia una nuova linea 
+// Impostiamo la partenza e l'arrivo del ciclo. Dobbiamo utilizzare per sicurezza un "do while" perchè un "count" potrebbe non essere interpretato bene, stessa cosa per le varianti di "var_dump". La fine va calcolata dividendola per 4 perchè ricordiamo che sono 3 numeri accompagnati da una "x" e uno spazio vuoto che ne rappresenta il fatto che ad ogni tripletta di numeri ci sia una nuova linea 
 $Inizio = 0;
 $Fine = ((count($array))/4);
 
